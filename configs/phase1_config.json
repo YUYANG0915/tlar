@@ -1,0 +1,53 @@
+{
+  "seed": 0,
+  "generation": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "max_new_tokens": 4096,
+    "do_sample": true
+  },
+  "models": {
+    "qwen3_8b_thinking": {
+      "model_id": "Qwen/Qwen3-8B",
+      "thinking_flag": true,
+      "draft_model_id": "Qwen/Qwen3-0.6B"
+    },
+    "mistral_small_3_2_24b": {
+      "model_id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "thinking_flag": false,
+      "draft_model_id": "mistralai/Ministral-8B-Instruct-2410"
+    },
+    "llama31_8b_instruct": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "thinking_flag": false,
+      "draft_model_id": "meta-llama/Llama-3.2-1B-Instruct"
+    }
+  },
+  "datasets": {
+    "code_debug": {
+      "kind": "jsonl",
+      "path": "data/private/code_debug.jsonl",
+      "prompt_fields": [
+        "prompt"
+      ],
+      "answer_fields": []
+    },
+    "math": {
+      "kind": "jsonl",
+      "path": "data/private/math.jsonl",
+      "prompt_fields": [
+        "prompt",
+        "problem"
+      ],
+      "answer_fields": []
+    },
+    "open_ended": {
+      "kind": "jsonl",
+      "path": "data/private/open_ended.jsonl",
+      "prompt_fields": [
+        "prompt"
+      ],
+      "answer_fields": []
+    }
+  }
+}

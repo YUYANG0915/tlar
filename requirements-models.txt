@@ -1,0 +1,6 @@
+-r requirements-cpu.txt
+torch>=2.2
+transformers>=4.57,<5
+accelerate>=0.29
+datasets>=2.18
+huggingface-hub
